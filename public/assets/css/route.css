@@ -1,0 +1,112 @@
+span.routes-loadboard-btn-content {
+  font-size: 10px;
+  background: rgb(125 35 38);
+  padding: 6px 8px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -14px;
+  right: -6px;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .2);
+
+}
+.custom-btn {
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 12px 15px;
+  line-height: 1;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0;
+  transition: ease-out 0.3s all;
+  position: relative;
+}
+.custom-btn.btn-withdraw-route {
+  background-color: #1f92a5;
+  border: 1px solid #8fc8d2;
+  box-shadow: unset;
+  margin-left: 10px;
+}
+.custom-btn.btn-withdraw-route:hover {
+  background-color: #fff;
+  color: #1f92a5 !important;
+}
+.custom-btn.btn-post-route {
+  background-color: #b17214;
+  border: 1px solid #b17214;
+  box-shadow: unset;
+  margin-left: 10px;
+}
+.custom-btn.btn-post-route:hover {
+  background-color: #fff;
+  color: #b17214 !important;
+}
+.btn-withdraw-route span {
+  background: #25cff2;
+  color: white;
+}
+.btn-post-route span {
+  background: #ffaa05;
+  color: white;
+}
+.btn.post-route:hover span, .btn.withdraw-route:hover span {
+  color: #fff;
+}
+.btn.btn-success-outline span {
+  background: #618339;
+}
+.btn-primary.btn-detele-routes:hover{
+  background-color: #4e1416 !important;
+} 
+.download-multiple-routes{
+  background-color: #618339 !important;
+  color: white !important;
+}
+.toggle-switch {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  margin-top:10px ;
+  width: 45px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-switch input[type="checkbox"]:checked + .toggle-label {
+  background-color: #4CAF50;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.lock-icon, .unlock-icon {
+  color: white;
+  font-size: 18px;
+  transition: opacity 0.3s ease;
+}
+
+/* Hide unlock when locked, hide lock when unlocked */
+.toggle-switch input[type="checkbox"]:checked + .toggle-label .lock-icon {
+  opacity: 0;
+}
+
+.toggle-switch input[type="checkbox"]:not(:checked) + .toggle-label .unlock-icon {
+  opacity: 0;
+}

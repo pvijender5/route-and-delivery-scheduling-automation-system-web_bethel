@@ -1,0 +1,49 @@
+<!-- Notes Modal -->
+<div class="modal fade" id="notesModal" tabindex="-1" role="dialog" aria-labelledby="notesModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="notesModalLabel">Edit Notes</h5>
+                <button type="button" class="btn-close py-0" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <!-- Your form content here -->
+                    <textarea class="form-control" id="notesTextarea" placeholder="Please add notes here...."></textarea>
+                    <!-- Other form fields if needed -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary close" data-dismiss="modal">Close</button>
+                <button type="button" class="btn" id="saveNotesBtn">Save Notes</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    $('#notesModal').on('hidden.bs.modal', function () {
+        var notesTextarea = document.getElementById("notesTextarea");
+        notesTextarea.value = ""; 
+        notesTextarea.classList.remove("error-border"); 
+    });
+
+    document.getElementById("saveNotesBtn").addEventListener("click", function () {
+        var notesTextarea = document.getElementById("notesTextarea");
+        if (notesTextarea.value.trim() === "") {
+            notesTextarea.classList.add("error-border");
+        } else {
+            notesTextarea.classList.remove("error-border");
+        }
+    });
+
+    document.getElementById("notesTextarea").addEventListener("input", function () {
+        var notesTextarea = document.getElementById("notesTextarea");
+        if (notesTextarea.value.trim() !== "") {
+            notesTextarea.classList.remove("error-border");
+        }
+    });
+
+</script>

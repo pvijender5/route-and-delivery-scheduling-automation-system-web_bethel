@@ -1,0 +1,1 @@
+<a href="{{ route('users.edit',  $id) }}" class="btn btn-light">View & Edit</a>

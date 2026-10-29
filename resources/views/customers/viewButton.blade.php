@@ -1,0 +1,1 @@
+<a class="btn btn-primary btn-light" href=" {{ route('customers.view', $id) }}"><i class="fa fa-eye me-1"></i> View</a>
